@@ -1,0 +1,37 @@
+<h5>So I created a decision based game only using JS and only a limited amount of data types.</h5>
+
+<ul>
+	<li>Strings</li>
+	<li>Numbers</li>
+	<li>Variables</li>
+	<li>If/Else</li>
+	<li>Math.round()</li>
+	<li>Math.random()</li>
+	<li>Prompt()</li>
+	<li>Alert()</li>
+	<li>Confirm() (didn't really know how to use this yet)</li>
+	<li>Operators like <strong><em>===, !=, &&, >, <, +, -, *, /</em></strong></li>
+</ul>
+
+<p>
+	I started by making an alert to set up the premise.  Then I used a prompt command inside a variable, to give the player a choice.  Once the player made a choice, I made so that whatever choice was made I concatenated a string to what they wrote.<br>
+	<br>
+	For example:
+	<ul>
+		<li>var <strong>choice</strong> = prompt("You have two pairs of shoes, Nike, Adidas.  Which do you wear?");</li>
+		<li>Alert("You chose " + <strong>choice</strong></li>
+	</ul>
+</p>
+
+<p>
+	Then I created a judges scoring system using Math.round and Math.random.  By puttin Math.random() inside of Math.round() it cancels out math.random() using decimals.  I put this formula into a varible called score.  So whenever I wanted a random number to be used as a score I simply input the variable name (score).  But, I also made a score for the competition using the variable <strong>enemyScore</strong>.  
+</p>
+
+<p>
+	The reason for this was because, at first when I didn’t differentiate the scores, the first randomly generated number was being used twice.  So the same score given to one team was also given to the opposing one.  So I needed a separate variable to use for the opponents score.
+</p>
+
+<p>
+	Also, IMPORTANT to note!, alert placement is very important.  And I would assume that placement in general is important.  I had placed the alert of when the other team had its turn, right under the alert stating what the judges had scored.  So the DOM read that first before reading my if/else statements.  So I would get the results of the scoring system at the very end.
+
+</p>

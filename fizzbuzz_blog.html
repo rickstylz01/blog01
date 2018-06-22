@@ -1,0 +1,63 @@
+<body>
+	<h1>To solve a fizzbuzz</h1>
+	<p>
+		<strong>Question:</strong><em>Generate a random number between 0 and 5.  If the result is divisible by 3 alert "fizz".  If the number is divisible by 5, alert "buzz", otherwise print the number to the console.</em>
+	</p>
+
+	<p>
+		The first step is to create a varaible to hold the answer value:
+		<ul>
+			<li>var randomNumber = Math.round( Math.random() * 5);</li>
+		</ul>
+		This variable <strong><em>rounds</em></strong> a <strong><em>random</em></strong> number and times it by 5. (in order to use a whole number).
+	</p>
+
+	<p>
+		Now we can use our "<strong><em>if, else</em></strong>" statements to determine when our alert would pop up so:
+		<ul>
+			<li>if(randomNumber%3 === 0) {
+				alert("fizz");
+			}</li>
+		</ul>
+		This statement is saying, <strong>if</strong> the randomNumber variable generates a number that is divisible by 3, then alert 'fizz'."<br>
+		<br>
+		The way the statement is written out is leterally saying, if the remainder of a random number, divided by 3, equals 0, then alert "fizz".
+	</p>
+
+	<p>
+		Then it's time for the "buzz" so:
+		<ul>
+			<li>else if(randomNumber%5 === 0) {
+				alert("buzz");
+			}
+				else {
+					console.log(randomNumber);
+			}</li>
+		</ul>
+		Now, according to the directions, we have to generate a random number between <strong>0 and 15</strong>. We have the code set up so that if whatever random number generated is divisible by 3 it will alert "fizz" and if it's divisible by 5 then "buzz" will be the alert.  Also our <strong>randomNumber</strong> variable is set to generate a random number, round it, and multiply it by 5 and we have to change that to <strong>15</strong>.<br>
+		<br>
+		The directions also state, "if a number is divisible by 3 AND 5, alert fizzbuzz and if it is 0 then alert nothing".<br>
+		<br>
+		So in order to accomplish that we use the <strong>"&&"</strong> symbols to state that, if a random number is divisible by 3 and 5 then something should happen. So:
+		<ul>
+			<li>if(randomNumber%3 === 0 && randomNumber != 0) {
+				if(randomNumber%5 === 0) {
+				alert("fizzbuzz");
+			}
+			else {
+			alert("fizz");
+		}
+			}</li>
+		</ul>
+		Literally, what this code is saying is, <strong>if</strong> the randomly generated number is divisible by 3 AND does not equal 0, Then it will check to see if the random number is divisible by 5 and if so then it will alert "fizzbuzz".
+	</p>
+
+	<p>
+		Within this bit of code from our if/else statements, You'll notice we used an if statement within another if statement, which helped in specifying the conditions we needed to meet to create the alert "fizzbuzz".  Now all the conditions within this statement must be met to create the alert or <strong>else</strong> only the "fizz" alert will pop up.
+	</p>
+
+
+
+
+
+</body>
